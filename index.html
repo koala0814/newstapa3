@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newstapa - Шинэ мэдээ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Google Translate Element (hidden) -->
+    <div id="google_translate_element"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-newspaper"></i>
+                <span class="logo-text">Newstapa</span>
+            </a>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#" class="nav-link active" data-section="home">ЭХЛЭЛ</a></li>
+                    <li><a href="#" class="nav-link" data-section="content">КОНТЕНТ</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">БИДНИЙ ТУХАЙ</a></li>
+                    <li><a href="#" class="nav-link" data-section="donation">ХАНДИВ</a></li>
+                    <!-- Mobile translate button will be added here by JavaScript -->
+                </ul>
+                
+                <!-- Desktop translate button -->
+                <div class="language-switcher desktop">
+                    <button id="translateBtnDesktop" class="translate-btn">
+                        <i class="fas fa-language"></i>
+                        <span>English</span>
+                    </button>
+                </div>
+            </nav>
+            
+            <div class="header-right">
+                <!-- Mobile translate button (visible on mobile) -->
+                <div class="language-switcher mobile">
+                    <button id="translateBtnMobile" class="translate-btn">
+                        <i class="fas fa-language"></i>
+                    </button>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Home Section - Empty for you to fill -->
+            <section id="home" class="section active">
+                <div class="empty-home">
+                    <i class="fas fa-newspaper"></i>
+                    <h2>Эхлэл хуудас</h2>
+                    <p>Энэ хэсэг нь хоосон байна. Та өөрийн агуулгаа энд оруулна уу.</p>
+                    <p style="margin-top: 20px; font-size: 16px;">Та дээрх цэснээс бусад хэсгүүд рүү шилжиж болно.</p>
+                </div>
+            </section>
+            
+            <!-- Content Section - News with Videos -->
+            <section id="content" class="section">
+                <h2 class="section-title">Сүүлийн мэдээ, бичлэгүүд</h2>
+                <p class="section-subtitle">Бидний сүүлийн үеийн судалгаа, мэдээ, видео контентууд</p>
+                
+                <div class="news-with-videos">
+                    <!-- News Article 1 -->
+                    <div class="news-article">
+                        <div class="article-header">
+                            <h1 class="article-title">Замын тээврийн аюулгүй байдал: Шинэ дүрэм, өөрчлөлтүүд</h1>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 2023 оны 10 сарын 15</span>
+                                <span><i class="far fa-eye"></i> 12,345 үзсэн</span>
+                                <span><i class="far fa-clock"></i> 5 мин унших</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <div class="article-text">
+                                <p>Энэ оны зун хэрэгжиж эхэлсэн замын тээврийн аюулгүй байдлын шинэ дүрэм журам нь нийтэд өргөн хүрээний хэлэлцүүлэг, санал шүүмжлэлийг өдөөсөн.</p>
+                                <p>Шинэ дүрмийн дагуу жолооч нарын мэргэжлийн чадварыг үнэлэх, сургалтын тогтолцоог шинэчлэх, ослын үед тусламж үйлчилгээ үзүүлэх хурдацтай байдлыг сайжруулах зэрэг олон чиглэлээр ажил хийгдэж байна.</p>
+                                <p>Монгол улсын Замын тээврийн ерөнхий газар энэ чиглэлээр хэд хэдэн судалгааны ажлыг хийж, гадаад, дотоодын туршлагад суурилсан шинэлэг арга барилыг нэвтрүүлэхээр ажиллаж байна.</p>
+                            </div>
+                            
+                            <div class="article-video">
+                                <div class="video-container">
+                                    <div class="video-placeholder">
+                                        <i class="fab fa-youtube"></i>
+                                        <p>Энэ мэдээний холбогдох видео контент</p>
+                                        <p style="font-size: 14px; margin-top: 10px;">YouTube суваг дээрх холбогдох бичлэгийг энд оруулна уу</p>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <div class="video-title">Замын тээврийн аюулгүй байдал - Шинэ дүрэм журам</div>
+                                    <div class="video-source">YouTube суваг: Budragchaa Ser</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Article 2 -->
+                    <div class="news-article">
+                        <div class="article-header">
+                            <h1 class="article-title">Боловсролын шинэчлэл: Сурагчдын оролцоог хэрхэн нэмэгдүүлэх вэ?</h1>
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 2023 оны 10 сарын 12</span>
+                                <span><i class="far fa-eye"></i> 8,901 үзсэн</span>
+                                <span><i class="far fa-clock"></i> 7 мин унших</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <div class="article-text">
+                                <p>Боловсролын системд хийгдэж буй шинэчлэл, сурагчдын идэвхтэй оролцоог хэрхэн нэмэгдүүлэх талаар сургуулийн багш нар, эцэг эхчүүд, сурагчдын төлөөлөгчид оролцсон ярилцлага боллоо.</p>
+                                <p>Сүүлийн жилүүдэд боловсролын салбарт олон шинэчлэл хийгдэж байгаа ч сурагчдын оролцоо, идэвхжил хангалтгүй байна гэдгийг судалгаанууд харуулж байна.</p>
+                                <p>Мэргэжилтнүүдийн үзэж байгаагаар сурагчдын оролцоог нэмэгдүүлэхэд хамтын ажиллагаа, орчин үеийн сургалтын технологи, сурагчдын санал бодлыг хүндэтгэх орчин нөхцөлийг бүрдүүлэх нь чухал ач холбогдолтой.</p>
+                            </div>
+                            
+                            <div class="article-video">
+                                <div class="video-container">
+                                    <div class="video-placeholder">
+                                        <i class="fab fa-youtube"></i>
+                                        <p>Энэ мэдээний холбогдох видео контент</p>
+                                        <p style="font-size: 14px; margin-top: 10px;">YouTube суваг дээрх холбогдох бичлэгийг энд оруулна уу</p>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <div class="video-title">Боловсролын шинэчлэл - Сурагчдын оролцоо</div>
+                                    <div class="video-source">YouTube суваг: Budragchaa Ser</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://youtube.com/@budragchaaser?si=dKc5DalzlaOawiWH" target="_blank" class="youtube-channel-link">
+                        <i class="fab fa-youtube"></i> Бидний YouTube суваг руу очих
+                    </a>
+                </div>
+            </section>
+            
+            <!-- About Section with Contact Info -->
+            <section id="about" class="section">
+                <h2 class="section-title">Бидний Тухай</h2>
+                <p class="section-subtitle">Newstapa нь 2020 онд байгуулагдсан, бие даасан сэтгүүл зүйн байгууллага юм.</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Бидний эрхэм зорилго</h3>
+                        <p>Бид нийгмийн хариуцлагатай сэтгүүл зүйг хөгжүүлж, иргэдэд үнэн бодит мэдээлэл хүргэх, нийгмийн асуудлуудыг гүнзгийрүүлэн судлах, ард түмнийг мэдээлэлтэй шийдвэр гаргахад дэмжлэг үзүүлэхийг зорилгоо болгодог.</p>
+                        
+                        <h3 style="margin-top: 30px;">Бидний үнэт зүйлс</h3>
+                        <p>Бид шударга ёс, ил тод байдал, бие даасан байдал, баримт дээр суурилсан судалгааг эрхэмлэдэг. Бүх агуулга нь гүнзгий судалгаа, баталгаажуулсан мэдээллээр бэлтгэгддэг.</p>
+                        
+                        <h3 style="margin-top: 30px;">Бидний хүрээнд</h3>
+                        <p>Одоогоор бид 15 орчим мэргэжлийн сэтгүүлч, судлаач, продюсер, редактортой баг хамт олонтойгоор ажиллаж, өдөр бүр шинэ агуулга гаргахад анхаарч байна.</p>
+                        
+                        <div class="team" style="margin-top: 40px;">
+                            <h3 style="font-size: 24px; color: var(--primary-color); margin-bottom: 25px;">Бидний багийн гишүүд</h3>
+                            
+                            <div class="team-grid">
+                                <div class="team-member">
+                                    <div class="member-photo"></div>
+                                    <h4 class="member-name">Болдбаатар</h4>
+                                    <p class="member-role">Ерөнхий редактор</p>
+                                </div>
+                                
+                                <div class="team-member">
+                                    <div class="member-photo" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80');"></div>
+                                    <h4 class="member-name">Энхтуяа</h4>
+                                    <p class="member-role">Сэтгүүлч, судлаач</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Холбоо барих</h3>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <h4>Хаяг</h4>
+                                <p>Улаанбаатар хот, Сүхбаатар дүүрэг</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <h4>Утас</h4>
+                                <p>+976 7011-2233</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h4>И-мэйл</h4>
+                                <p>info@newstapa.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fab fa-youtube"></i>
+                            <div class="contact-details">
+                                <h4>YouTube суваг</h4>
+                                <p>youtube.com/@budragchaaser</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-details">
+                                <h4>Ажлын цаг</h4>
+                                <p>Даваа - Баасан: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Donation Section -->
+            <section id="donation" class="section">
+                <h2 class="section-title">Хандив</h2>
+                <p class="section-subtitle">Таны хандив бие даасан сэтгүүл зүйг дэмжиж, чанартай агуулгыг үргэлжлүүлэхэд тусална</p>
+                
+                <div class="donation-options">
+                    <div class="donation-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Нэг удаагийн хандив</h3>
+                        <p>Таны нэг удаагийн хандив маань шинэ төслүүдийг эхлүүлэх, нэмэлт судалгаа хийхэд тусална.</p>
+                        <a href="#" class="donate-btn">Хандив өгөх</a>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Сар тутмын дэмжлэг</h3>
+                        <p>Сар бүрийн тогтмол дэмжлэг нь бидэнд тогтвортой ажиллах, урт хугацааны төслүүдэд анхаарлаа хандуулах боломжийг олгоно.</p>
+                        <a href="#" class="donate-btn">Бүртгүүлэх</a>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Байгууллагын түншлэл</h3>
+                        <p>Хэрэв та байгууллага төлөөлж дэмжлэг үзүүлэх сонирхолтой бол бидэнтэй холбогдоорой.</p>
+                        <a href="#" class="donate-btn">Холбогдох</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <!-- Google Translate Script - MUST be loaded after our script.js -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
